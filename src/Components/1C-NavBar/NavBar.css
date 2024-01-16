@@ -1,0 +1,152 @@
+/*========================================
+1- HEADER
+
+2-LNKS
+
+3-BUTTON
+
+4TOGGLE
+
+5-MEDIA~QUERY
+
+=========================================*/
+
+/*
+1- ========= HEADER =========
+*/
+header.container {
+  padding: 0 20px;
+  height: 80px;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+2- ========= LNKS =========
+*/
+
+header .Brand-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header .Brand-links p {
+  font-size: 1.8rem;
+}
+header .Brand-links p::first-letter {
+  color: var(--primary-color);
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header ul li {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+header ul li a {
+  color: #1d4371;
+  cursor: pointer;
+}
+
+header ul li a.first-link {
+  color: var(--primary-color);
+}
+
+/*
+1- ========= BUTTON =========
+*/
+
+header button {
+  width: 78px;
+  padding: 15px;
+  margin: 0px 12px;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+header button:hover {
+  box-shadow: 0 0 10px 2px #fbb6a570;
+  opacity: 0.9;
+}
+
+/*
+4- ========= TOGGLE =========
+*/
+
+header .btn-menu-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  background-color: #111;
+  display: none;
+}
+
+header .menu-icon span {
+  background-color: #fff;
+  height: 5px;
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+header .menu-icon span:first-child {
+  top: 20px;
+}
+
+header .menu-icon span:last-child {
+  top: 30px;
+}
+
+header .menu-icon:hover span:first-child {
+  top: 20px;
+  left: 5px;
+  transform: rotate(45deg);
+}
+
+header .menu-icon:hover span:last-child {
+  top: 20px;
+  left: 5px;
+  transform: rotate(-45deg);
+}
+
+/*
+5- ========= MEDIA~QUERY =========
+*/
+@media screen and (max-width: 950px) {
+  header .menu-icon {
+    display: block;
+  }
+  header ul {
+    display: none;
+  }
+}
