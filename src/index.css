@@ -8,6 +8,14 @@
 
 :root {
   --primary-color: #fd7e14;
+  --gradient-pale-cyan-blue: linear-gradient(
+    135deg,
+    #33a7b5,
+    #b6e3d4 40%,
+    #e7daa7
+  );
+  --mt: 80px;
+  --mb: 80px;
 }
 
 ul,

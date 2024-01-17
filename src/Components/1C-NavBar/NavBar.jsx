@@ -1,15 +1,17 @@
 import "./NavBar.css";
 
-import data from "./data.json";
-console.log(data);
+import data from "../../../public/data.json";
+
+const title = data.Header[0].title;
+const links = data.Links;
 
 const NavBar = () => {
   return (
     <header className="container">
       <div className="Brand-links">
-        <p className="Brand">SIDMIX</p>
+        <p className="Brand">{title}</p>
         <ul>
-          {/* {links &&
+          {links &&
             links.length > 0 &&
             links.map((link, index) => (
               <li key={link.id}>
@@ -17,7 +19,7 @@ const NavBar = () => {
                   {link.title}
                 </a>
               </li>
-            ))} */}
+            ))}
         </ul>
       </div>
       <div className="btn-menu-icon">

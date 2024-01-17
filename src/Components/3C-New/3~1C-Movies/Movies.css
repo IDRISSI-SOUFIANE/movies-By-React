@@ -1,0 +1,32 @@
+section.new {
+  position: relative;
+}
+
+section.new {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.new .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section.new h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #1d4371;
+}
+
+section.new p {
+  color: #666;
+  font-size: 1.5rem;
+  width: 80%;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
