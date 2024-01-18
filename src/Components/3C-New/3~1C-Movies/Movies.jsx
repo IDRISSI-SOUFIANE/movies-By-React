@@ -1,6 +1,7 @@
 import "./Movies.css";
+import MoviesSlide from "./3~1C-MoviesSwiper/MoviesSlide";
 
-const Movies = () => {
+const New = () => {
   return (
     <section className="new">
       <div className="info">
@@ -10,8 +11,12 @@ const Movies = () => {
           movies from all over the world.
         </p>
       </div>
+
+      <div className="scroll">
+        <MoviesSlide />
+      </div>
     </section>
   );
 };
 
-export default Movies;
+export default New;

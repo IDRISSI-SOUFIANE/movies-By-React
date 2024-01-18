@@ -1,12 +1,13 @@
 section.new {
   position: relative;
+  margin-bottom: 100px;
 }
 
 section.new {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 section.new .info {
@@ -30,3 +31,5 @@ section.new p {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
+
+/*  =================== */
