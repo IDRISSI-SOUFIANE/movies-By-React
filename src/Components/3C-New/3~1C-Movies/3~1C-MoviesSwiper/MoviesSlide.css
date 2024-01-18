@@ -1,6 +1,7 @@
 .swiper {
   padding: 2rem !important;
   overflow: hidden;
+  z-index: 2; /* Add this line */
 }
 
 .image {
@@ -24,7 +25,7 @@
 .swiperSlide .play {
   color: #673ab7;
   position: absolute;
-  z-index: 200000;
+  z-index: 3;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -64,6 +65,14 @@
   overflow: hidden;
 }
 
+.container.ddd {
+  position: fixed;
+  inset: 0;
+  z-index: 11 !important;
+  backdrop-filter: blur(4px); /*this control bcg*/
+  background-color: rgba(40, 40, 48, 0.91);
+}
+
 /*=======================================
 3. MODAL == POP UP
 =========================================
@@ -85,10 +94,11 @@
 }
 
 .poup {
-  position: fixed;
+  /* position: fixed;
   inset: 0;
   z-index: 11;
-  background-color: rgba(40, 40, 48, 0.91);
-  /* filter: blur(8px); => this control text */
-  backdrop-filter: blur(4px); /*this control bcg*/
+  backdrop-filter: blur(4px); this control bcg
+  background-color: rgba(40, 40, 48, 0.91); */
 }
+
+/* filter: blur(8px); => this control text */
