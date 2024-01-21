@@ -1,6 +1,7 @@
 import "./MoviesSlide.css";
 
 import { useEffect, useState } from "react";
+import YouTube from "react-youtube";
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,24 +11,46 @@ import "swiper/css/scrollbar";
 import "swiper/css/scrollbar";
 
 // import Swiper core and required modules
-// import { Autoplay, A11y } from "swiper/modules";
+import { Autoplay, A11y } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const MoviesSlide = () => {
+  // const [isHovered, setIsHovered] = useState(false);
+
   const [movies, setMovies] = useState([]);
-  // console.log(movies);  let movie_id = movies.map((movie) => movie.id);
 
   const [clickedSlide, setClickedSlide] = useState([] || undefined);
 
   const [popUpBox, setPopUpBox] = useState(false);
 
-  const closeIcon = () => {
-    console.log("close");
+  const [video, setVideo] = useState([]);
+
+  const [youtubeId, setYoutubeId] = useState();
+
+  const videoBref = video;
+  setTimeout(() => {
+    if (videoBref.length > 0) {
+      // console.log("Yes is biger than > 0");
+      // console.log(xx);
+      // console.log(xx[0].key);
+      setYoutubeId(videoBref[0].key);
+    } else {
+      // console.log("Yes is smaller than < 0");
+      setYoutubeId("");
+    }
+  }, 500);
+
+  const closeIcon = (event) => {
     if (popUpBox == true) {
       setPopUpBox(false);
+      event.target.pauseVideo();
     }
   };
+
+  // function videoOnReady(event) {
+  //   event.target.pauseVideo();
+  // }
 
   // ==== FETCH DATA ====
   const api_key = "dfdb8fba093651a08fc61b28b9c3c796";
@@ -43,7 +66,6 @@ const MoviesSlide = () => {
     async function fetchMovies(api) {
       const response = await fetch(api);
       const data = await response.json();
-      // console.log(data);
       setMovies(data.results);
     }
 
@@ -51,12 +73,10 @@ const MoviesSlide = () => {
 
     // =================== ========================== ======================
 
-    // console.log(movie_id);
-
     async function fetchbrefMovies(brf) {
       const response = await fetch(brf);
       const databref = await response.json();
-      console.log(databref.results);
+      setVideo(databref.results);
     }
 
     const bref = `${base_url}/movie/${clickedSlide.id}/videos?api_key=${api_key}`;
@@ -72,7 +92,7 @@ const MoviesSlide = () => {
       <Swiper
         dir="rtl"
         className="swiper"
-        // modules={[Autoplay, A11y]}
+        modules={[Autoplay, A11y]}
         spaceBetween={25}
         slidesPerView={20}
         // autoplay={{
@@ -84,7 +104,7 @@ const MoviesSlide = () => {
         // onMouseEnter={() => setIsHovered(true)}
         // onMouseLeave={() => setIsHovered(false)}
         // loop={true}
-        speed={1000}
+        // speed={1000}
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -123,8 +143,6 @@ const MoviesSlide = () => {
                 <i className="fa-regular fa-circle-play"></i>
                 <p>Play Trailer</p>
               </div>
-
-              {/* {activeSlide == movie.id && <div>Hello</div>} */}
             </SwiperSlide>
           ))}
       </Swiper>
@@ -135,7 +153,7 @@ const MoviesSlide = () => {
           </div>
 
           <div className="image">
-            <img src={`${base_img}${clickedSlide.poster_path}`} alt="" />
+            <YouTube videoId={youtubeId} />
           </div>
 
           <div className="description">
