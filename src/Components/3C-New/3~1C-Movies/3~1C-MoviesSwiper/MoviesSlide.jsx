@@ -1,3 +1,8 @@
+// 1 - SWIPER
+// 2 - FETSH DATA => 2.1 : FETSH DATA MOVIES / 2.2 : FETSH DATA ID FOR SPESIFIC MOVIE
+// 3 - POPUPBOX AND ICON OF CLOSE, WHEN CLICKED ICON CLOSE POPUPBOX AND CLOSE VIDEO
+// 4 - SETTIMEOUT IS PREVENT AN ERROR
+
 import "./MoviesSlide.css";
 
 import { useEffect, useState } from "react";
@@ -21,12 +26,16 @@ const MoviesSlide = () => {
   const [movies, setMovies] = useState([]);
 
   const [clickedSlide, setClickedSlide] = useState([] || undefined);
-
+  console.log(clickedSlide);
   const [popUpBox, setPopUpBox] = useState(false);
 
   const [video, setVideo] = useState([]);
 
   const [youtubeId, setYoutubeId] = useState();
+
+  const [youtubePlayer, setYoutubePlayer] = useState(null);
+
+  // 4 - ============= SETTIMEOUT IS PREVENT AN ERROR =============
 
   const videoBref = video;
   setTimeout(() => {
@@ -41,18 +50,37 @@ const MoviesSlide = () => {
     }
   }, 500);
 
-  const closeIcon = (event) => {
-    if (popUpBox == true) {
-      setPopUpBox(false);
-      event.target.pauseVideo();
+  // 4 - ============= SETTIMEOUT IS PREVENT AN ERROR =============
+
+  // 3 - =========== POPUPBOX AND ICON OF CLOSE, WHEN CLICKED ICON CLOSE POPUPBOX AND CLOSE VIDEO  ===========
+
+  // Function to handle the onReady event of the YouTube component
+  const onReady = (event) => {
+    // Save the YouTube player reference
+    setYoutubePlayer(event.target);
+  };
+
+  // Function to close the pop-up box and stop the video
+  const closePopUpBox = () => {
+    setPopUpBox(false);
+
+    // Stop the video using the YouTube player reference
+    if (youtubePlayer) {
+      youtubePlayer.stopVideo();
     }
   };
 
-  // function videoOnReady(event) {
-  //   event.target.pauseVideo();
-  // }
+  // Function to close the pop-up box and stop the video when the close icon is clicked
+  const closeIcon = () => {
+    if (popUpBox === true) {
+      closePopUpBox();
+    }
+  };
 
-  // ==== FETCH DATA ====
+  // 3 - =========== POPUPBOX AND ICON OF CLOSE, WHEN CLICKED ICON CLOSE POPUPBOX AND CLOSE VIDEO  ===========
+
+  // 2 - ============== FETSH DAT ==============
+
   const api_key = "dfdb8fba093651a08fc61b28b9c3c796";
   const base_url = "https://api.themoviedb.org/3";
   const get_movies = "/discover/movie";
@@ -61,7 +89,9 @@ const MoviesSlide = () => {
   useEffect(() => {
     clickedSlide;
 
-    // =================== ========================== ======================
+    // ===========================================================================
+
+    // 2.1 : FETSH DATA MOVIES
 
     async function fetchMovies(api) {
       const response = await fetch(api);
@@ -71,7 +101,9 @@ const MoviesSlide = () => {
 
     const api_url = `${base_url}/${get_movies}?api_key=${api_key}`;
 
-    // =================== ========================== ======================
+    // ===========================================================================
+
+    // 2.2 : FETSH DATA ID FOR SPESIFIC MOVIE
 
     async function fetchbrefMovies(brf) {
       const response = await fetch(brf);
@@ -85,15 +117,16 @@ const MoviesSlide = () => {
     fetchbrefMovies(bref);
   }, [clickedSlide.id, clickedSlide]);
 
-  // ==== FETCH DATA ====
+  //  2 - ============== FETSH DAT ==============
 
   return (
+    // 1 - ============== SWIPER ==============
     <div className="parent-container">
       <Swiper
         dir="rtl"
         className="swiper"
         modules={[Autoplay, A11y]}
-        spaceBetween={25}
+        spaceBetween={7}
         slidesPerView={20}
         // autoplay={{
         //   delay: 0,
@@ -143,9 +176,17 @@ const MoviesSlide = () => {
                 <i className="fa-regular fa-circle-play"></i>
                 <p>Play Trailer</p>
               </div>
+              {
+                <>
+                  <p className="name">{movie.title}</p>
+                  <p className="category">movie</p>
+                </>
+              }
             </SwiperSlide>
           ))}
       </Swiper>
+      {/* 1 - ============== SWIPER ============== */}
+
       <div className={`popUpBox ${popUpBox == true ? "active" : undefined}`}>
         <div className="conentInf">
           <div className="close-icon" onClick={() => closeIcon()}>
@@ -153,7 +194,7 @@ const MoviesSlide = () => {
           </div>
 
           <div className="image">
-            <YouTube videoId={youtubeId} />
+            <YouTube videoId={youtubeId} onReady={onReady} />
           </div>
 
           <div className="description">

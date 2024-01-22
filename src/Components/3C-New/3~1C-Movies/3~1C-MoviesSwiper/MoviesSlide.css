@@ -1,15 +1,7 @@
 .swiper {
-  padding: 2rem !important;
-  overflow: hidden;
+  padding: 0.3rem 1rem !important;
+  /* overflow: hidden; */
   /* z-index: 6 !important; */
-}
-
-.image {
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  transform: scale(1);
-  transition: 0.4s ease-in-out;
 }
 
 .swiperSlide {
@@ -20,6 +12,7 @@
   display: flex !important;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .swiperSlide .play {
@@ -52,7 +45,15 @@
   color: #fff;
 }
 
-.swiperSlide:hover .image {
+img.image {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s ease-in-out;
+  user-select: none;
+}
+
+.swiperSlide:hover img.image {
   transform: scale(1.1);
   filter: brightness(0.5);
 }
@@ -87,7 +88,7 @@
   align-items: center;
   visibility: hidden;
   opacity: 0;
-  transition: var(--trns);
+  /* transition: var(--trns); */
 }
 
 .popUpBox.active {
@@ -102,14 +103,16 @@
   max-height: 85vh;
   max-width: 800px;
   width: 100%;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   overflow: auto;
+  position: relative;
   /* overflow: hidden scroll; */
+  margin: 0 10px;
 }
 
 .popUpBox .conentInf .close-icon {
-  position: fixed;
-  right: 15%;
+  position: absolute;
+  right: 0;
   font-size: 3.5rem;
   color: #fff;
   cursor: pointer;
@@ -146,10 +149,59 @@
   font-size: 1.3rem;
   line-height: 1.3;
   font-weight: normal;
-  text-align: justify;
   margin-bottom: 10px;
 }
 
 iframe {
   width: 100%;
+}
+
+.swiperSlide .name {
+  position: absolute;
+  margin: 0 0 1rem 1rem;
+  color: #fff;
+  bottom: 30px;
+  left: 0px;
+  text-align: end;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.swiperSlide .category {
+  position: absolute;
+  margin: 1rem;
+  color: #fff;
+  bottom: 0;
+  left: 0px;
+  text-align: end;
+  font-size: 1rem;
+}
+
+.swiperSlide .name-tv {
+  position: absolute;
+  margin: 0 0 1rem 1rem;
+  color: #fff;
+  bottom: 30px;
+  left: 0px;
+  text-align: start;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.swiperSlide .category-tv {
+  position: absolute;
+  margin: 1rem;
+  color: #fff;
+  bottom: 0;
+  left: 0px;
+  text-align: start;
+  font-size: 1rem;
+}
+
+/*=======================================
+3. MEDIA QUERY
+=========================================
+*/
+
+@media screen and (max-width: 992px) {
 }

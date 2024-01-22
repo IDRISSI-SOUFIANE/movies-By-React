@@ -1,5 +1,6 @@
 import "./Movies.css";
 import MoviesSlide from "./3~1C-MoviesSwiper/MoviesSlide";
+import Tv from "../3~2C-Tv/Tv";
 
 const New = () => {
   return (
@@ -14,6 +15,7 @@ const New = () => {
 
       <div className="scroll">
         <MoviesSlide />
+        <Tv />
       </div>
     </section>
   );
