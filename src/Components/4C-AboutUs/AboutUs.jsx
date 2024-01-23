@@ -3,13 +3,74 @@ import player from "../../../public/images/1.png";
 import bicycle from "../../../public/images/2.png";
 import basketball from "../../../public/images/3.png";
 import tennis from "../../../public/images/4.png";
+// import { useEffect } from "react";
+
+import logos from "../../../public/data.json";
+
+// console.log(logos["About-Us"][0].logo1);
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/scrollbar";
+
+// import Swiper core and required modules
+import { Autoplay, A11y } from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const AboutUs = () => {
+  /* 
+  // useEffect(() => {
+  //   let nums = document.querySelectorAll(".Advantages .num");
+  //   let section = document.querySelector(".belt");
+
+  //   let started = false;
+
+  //   window.onscroll = function () {
+  //     // Use `window.scrollY` instead of `window.scroll`
+  //     if (window.scrollY >= section.offsetTop) {
+  //       if (!started) {
+  //         nums.forEach((num) => startCount(num));
+  //       }
+  //       started = true;
+  //     }
+  //   };
+
+  //   function startCount(el) {
+  //     let goal = parseInt(el.dataset.goal);
+  //     console.log(goal);
+
+  //     let count = setInterval(() => {
+  //       el.textContent = parseInt(el.textContent) + 1;
+
+  //       if (parseInt(el.textContent) >= goal) {
+  //         clearInterval(count);
+  //         el.textContent = goal; // Ensure the final value is exactly the goal
+  //       }
+  //     }, 2000 / goal);
+  //   }
+
+  //   // Trigger the counting immediately when the component mounts
+  //   // nums.forEach((num) => startCount(num)); ****
+
+  //   // Cleanup the scroll event listener when the component is unmounted
+  //   return () => {
+  //     window.onscroll = null;
+  //   };
+  // }, []);
+*/
+
+  //   const [isHovered, setIsHovered] = useState(false);
+
+  const logo = logos["About-Us"];
+
   return (
     <section className="about-us">
       <div className="containeofAll">
         <h2>About Us</h2>
-        <div className="conatiner" style={{ backgroundColor: "yellow" }}>
+        <div className="conatiner">
           <div className="infoabout">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
@@ -26,7 +87,7 @@ const AboutUs = () => {
             <img src={player} alt="ddefi" />
           </div>
         </div>
-        <div className="conatiner" style={{ backgroundColor: "green" }}>
+        <div className="conatiner">
           <div className="infoabout">
             <p>
               voluptas quaerat sit quia eius consequatur tenetur autem dolor
@@ -44,7 +105,7 @@ const AboutUs = () => {
             <img src={bicycle} alt="ddefi" />
           </div>
         </div>
-        <div className="conatiner" style={{ backgroundColor: "orangered" }}>
+        <div className="conatiner">
           <div className="infoabout">
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
@@ -61,31 +122,92 @@ const AboutUs = () => {
             <img src={basketball} alt="ddefi" />
           </div>
         </div>
-        <div className="conatiner" style={{ backgroundColor: "red" }}>
-          <div className="infoabout">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
-              distinctio, accusamus vitae voluptas quaerat sit quia eius
-              consequatur tenetur autem dolor consequuntur aut odit minima,
-              possimus nihil eum a delectus Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Cumque distinctio, accusamus vitae
-              voluptas quaerat sit quia eius consequatur tenetur autem dolor
-              consequuntur aut odit minima, possimus nihil eum a delectus
-            </p>
-          </div>
+        <div className="last-page">
+          <div className="conatiner">
+            <div className="infoabout">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
+                distinctio, accusamus vitae voluptas quaerat sit quia eius
+                consequatur tenetur autem dolor consequuntur aut odit minima,
+                possimus nihil eum a delectus Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Cumque distinctio, accusamus
+                vitae voluptas quaerat sit quia eius consequatur tenetur autem
+                dolor consequuntur aut odit minima, possimus nihil eum a
+                delectus
+              </p>
+            </div>
 
-          <div className="image">
-            <img src={tennis} alt="ddefi" />
+            <div className="image">
+              <img src={tennis} alt="ddefi" />
+            </div>
           </div>
 
           <div className="belt">
-            <div className="Advantages">4k 35000+ 200000+</div>
+            <div className="Advantages">
+              <div>
+                <p>4k</p>
+                <p>Ultra 4K quality</p>
+              </div>
 
-            <div className="scroll-Logo">logo</div>
+              <div>
+                <p className="num" data-goal="350">
+                  35000 +
+                </p>
+                <p>Live Tv & Sport Channels</p>
+              </div>
+
+              <div>
+                <p className="num" data-goal="200">
+                  2000 +
+                </p>
+                <p>Movies & Series</p>
+              </div>
+            </div>
+
+            <div className="scroll-Logo">
+              {/* // 1 - ============== SWIPER ============== */}
+              <Swiper
+                dir="ltr"
+                className="swiper"
+                modules={[Autoplay, A11y]}
+                autoplay={{
+                  delay: 1000,
+                  disableOnInteraction: false,
+                  // pauseOnMouseEnter: true,
+                  // ...(isHovered && { pause: true }),
+                }}
+                // onMouseEnter={() => setIsHovered(true)}
+                // onMouseLeave={() => setIsHovered(false)}
+                loop={true}
+                speed={1000}
+              >
+                <SwiperSlide className={`swiperSlide`}>
+                  <li>
+                    <img src={logo[0].logo1} alt="" />
+                  </li>
+                  <li>
+                    <img src={logo[0].logo2} alt="" />
+                  </li>
+                  <li>
+                    <img src={logo[0].logo3} alt="" />
+                  </li>
+                  <li>
+                    <img src={logo[0].logo4} alt="" />
+                  </li>
+                  <li>
+                    <img src={logo[0].logo5} alt="" />
+                  </li>
+                  <li>
+                    <img src={logo[0].logo6} alt="" />
+                  </li>
+                </SwiperSlide>
+              </Swiper>
+              {/* 1 - ============== SWIPER ============== */}
+            </div>
           </div>
         </div>
       </div>
-      <div>
+      {/* <div>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
         blanditiis soluta suscipit ipsum repudiandae eos totam esse impedit
         reprehenderit dolor eum, rem accusamus possimus porro, nulla aliquid
@@ -307,7 +429,7 @@ const AboutUs = () => {
         Illo, ratione. Veritatis rem libero maxime cum aperiam, perferendis
         illum placeat reiciendis neque veniam alias, enim molestias et quas
         magnam aliquid? Provident illo alias ad?
-      </div>
+      </div> */}
     </section>
   );
 };

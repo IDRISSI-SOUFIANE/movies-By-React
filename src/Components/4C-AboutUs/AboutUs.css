@@ -41,9 +41,79 @@
   height: 500px;
 }
 
+.last-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.last-page .belt {
+  width: 100%;
+  background: green;
+  position: absolute;
+  bottom: 80px;
+  padding: 2rem;
+  z-index: 1000 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.last-page .belt .Advantages {
+  color: #fff;
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 50%;
+}
+
+.last-page .belt .Advantages div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.last-page .belt .Advantages div p {
+  color: var(--red);
+  font-weight: bold;
+}
+
+.last-page .belt .Advantages div p:first-child {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.last-page .belt .Advantages div p:last-child {
+  font-size: 1.1rem;
+  color: var(--gray-dark);
+}
+
+.last-page .belt .scroll-Logo {
+  color: #fff;
+  background-color: #fff;
+  /* overflow: hidden; */
+}
+
+.last-page .belt .scroll-Logo .swiper-slide {
+  width: 100% !important;
+  user-select: none;
+  cursor: text;
+  /* 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; */
+}
+
+.last-page .belt .scroll-Logo .swiper-slide li img {
+  width: 100px;
+}
+
 /*  ===== MEDIA~QUERY ====== */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1077px) {
   .conatiner {
     width: 100%;
     gap: 0;

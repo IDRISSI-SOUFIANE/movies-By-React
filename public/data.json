@@ -42,5 +42,15 @@
       "span": "SID MIX",
       "btn": "Start Now"
     }
+  ],
+  "About-Us": [
+    {
+      "logo1": "../public/logos/1.png ",
+      "logo2": "../public/logos/2.png",
+      "logo3": "../public/logos/3.png",
+      "logo4": "../public/logos/4.png",
+      "logo5": "../public/logos/5.png",
+      "logo6": "../public/logos/6.png"
+    }
   ]
 }
