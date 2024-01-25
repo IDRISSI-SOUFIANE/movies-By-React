@@ -27,7 +27,7 @@ const MoviesSlide = () => {
   const [movies, setMovies] = useState([]);
 
   const [clickedSlide, setClickedSlide] = useState([] || undefined);
-  console.log(clickedSlide);
+  // console.log(clickedSlide);
   const [popUpBox, setPopUpBox] = useState(false);
 
   const [video, setVideo] = useState([]);

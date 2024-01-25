@@ -45,12 +45,194 @@
   ],
   "About-Us": [
     {
-      "logo1": "../public/logos/1.png ",
-      "logo2": "../public/logos/2.png",
-      "logo3": "../public/logos/3.png",
-      "logo4": "../public/logos/4.png",
-      "logo5": "../public/logos/5.png",
-      "logo6": "../public/logos/6.png"
+      "Logos": [
+        {
+          "id": 1,
+          "img": "../public/logos/1.png "
+        },
+        {
+          "id": 2,
+          "img": "../public/logos/2.png"
+        },
+        {
+          "id": 3,
+          "img": "../public/logos/3.png"
+        },
+        {
+          "id": 4,
+          "img": "../public/logos/4.png"
+        },
+        {
+          "id": 5,
+          "img": "../public/logos/5.png"
+        },
+        {
+          "id": 6,
+          "img": "../public/logos/6.png"
+        }
+      ],
+
+      "content": [
+        {
+          "id": 1,
+          "p": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumquedistinctio, accusamus vitae voluptas quaerat sit quia eiuspossimus nihil eum a delectus Lorem ipsum dolor sit ametconsectetur, adipisicing elit. Cumque distinctio, accusamus vitaevoluptas quaerat sit quia eius consequatur tenetur autem dolorconsequuntur aut odit minima, possimus nihil eum a delectus",
+          "img": "../public/images/1.png"
+        },
+        {
+          "id": 2,
+          "p": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumquedistinctio, accusamus vitae voluptas quaerat sit quia eiuspossimus nihil eum a delectus Lorem ipsum dolor sit ametconsectetur, adipisicing elit. Cumque distinctio, accusamus vitaevoluptas quaerat sit quia eius consequatur tenetur autem dolorconsequuntur aut odit minima, possimus nihil eum a delectus",
+          "img": "../public/images/2.png"
+        },
+        {
+          "id": 3,
+          "p": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumquedistinctio, accusamus vitae voluptas quaerat sit quia eiuspossimus nihil eum a delectus Lorem ipsum dolor sit ametconsectetur, adipisicing elit. Cumque distinctio, accusamus vitaevoluptas quaerat sit quia eius consequatur tenetur autem dolorconsequuntur aut odit minima, possimus nihil eum a delectus",
+          "img": "../public/images/3.png"
+        }
+      ]
+    }
+  ],
+  "Tabs": [
+    {
+      "Shahid": [
+        {
+          "id": 1,
+          "h2": "one Month",
+          "firstP": 1.0,
+          "p1": "+15,000 Channels",
+          "p2": "+40,000 Vods",
+          "p3": "Android,PC,SmartTv",
+          "p4": "M3U MAG Enigma2",
+          "p5": "24/7 Support",
+          "btn": "Get Started"
+        },
+        {
+          "id": 2,
+          "h2": "3 Months",
+          "firstP": 2.0,
+          "p1": "+15,000 Channels",
+          "p2": "+40,000 Vods",
+          "p3": "Android,PC,SmartTv",
+          "p4": "M3U MAG Enigma2",
+          "p5": "24/7 Support",
+          "btn": "Get Started"
+        },
+        {
+          "id": 3,
+          "h2": "6 Months ",
+          "firstP": 3.0,
+          "p1": "+15,000 Channels",
+          "p2": "+40,000 Vods",
+          "p3": "Android,PC,SmartTv",
+          "p4": "M3U MAG Enigma2",
+          "p5": "24/7 Support",
+          "btn": "Get Started"
+        }
+      ],
+      "Iptv": [
+        {
+          "id": 1,
+          "h2": "one Month",
+          "firstP": 2.0,
+          "p1": "+15,000 Channels",
+          "p2": "+40,000 Vods",
+          "p3": "Android,PC,SmartTv",
+          "p4": "M3U MAG Enigma2",
+          "p5": "24/7 Support",
+          "btn": "Get Started"
+        },
+        {
+          "id": 2,
+          "h2": "6 Months",
+          "firstP": 150.0,
+          "p1": "+15,000 Channels",
+          "p2": "+40,000 Vods",
+          "p3": "Android,PC,SmartTv",
+          "p4": "M3U MAG Enigma2",
+          "p5": "24/7 Support",
+          "btn": "Get Started"
+        },
+        {
+          "id": 3,
+          "h2": "year",
+          "firstP": 200.0,
+          "p1": "+15,000 Channels",
+          "p2": "+40,000 Vods",
+          "p3": "Android,PC,SmartTv",
+          "p4": "M3U MAG Enigma2",
+          "p5": "24/7 Support",
+          "btn": "Get Started"
+        }
+      ],
+      "Spotify": [
+        {
+          "id": 1,
+          "h2": "one Month",
+          "firstP": 1,
+          "p1": "+15,000 Channels",
+          "p2": "+40,000 Vods",
+          "p3": "Android,PC,SmartTv",
+          "p4": "M3U MAG Enigma2",
+          "p5": "24/7 Support",
+          "btn": "Get Started"
+        },
+        {
+          "id": 2,
+          "h2": "3 Months",
+          "firstP": 2,
+          "p1": "+15,000 Channels",
+          "p2": "+40,000 Vods",
+          "p3": "Android,PC,SmartTv",
+          "p4": "M3U MAG Enigma2",
+          "p5": "24/7 Support",
+          "btn": "Get Started"
+        },
+        {
+          "id": 3,
+          "h2": "6 Months",
+          "firstP": 3,
+          "p1": "+15,000 Channels",
+          "p2": "+40,000 Vods",
+          "p3": "Android,PC,SmartTv",
+          "p4": "M3U MAG Enigma2",
+          "p5": "24/7 Support",
+          "btn": "Get Started"
+        }
+      ],
+      "Netflix": [
+        {
+          "id": 1,
+          "h2": "one Month",
+          "firstP": 4,
+          "p1": "+15,000 Channels",
+          "p2": "+40,000 Vods",
+          "p3": "Android,PC,SmartTv",
+          "p4": "M3U MAG Enigma2",
+          "p5": "24/7 Support",
+          "btn": "Get Started"
+        },
+        {
+          "id": 2,
+          "h2": "6 Months",
+          "firstP": 140,
+          "p1": "+15,000 Channels",
+          "p2": "+40,000 Vods",
+          "p3": "Android,PC,SmartTv",
+          "p4": "M3U MAG Enigma2",
+          "p5": "24/7 Support",
+          "btn": "Get Started"
+        },
+        {
+          "id": 3,
+          "h2": "year",
+          "firstP": 240,
+          "p1": "+15,000 Channels",
+          "p2": "+40,000 Vods",
+          "p3": "Android,PC,SmartTv",
+          "p4": "M3U MAG Enigma2",
+          "p5": "24/7 Support",
+          "btn": "Get Started"
+        }
+      ]
     }
   ]
 }
