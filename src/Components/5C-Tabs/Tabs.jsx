@@ -28,7 +28,7 @@ const Tabs = () => {
         });
         // console.log(e.currentTarget.dataset.cont);
         document.querySelector(e.currentTarget.dataset.cont).style.display =
-          "grid";
+          "flex";
       });
     });
 
@@ -52,8 +52,6 @@ const Tabs = () => {
 
   return (
     <section className="prices">
-      <div className={`layer ${show == true ? "active" : undefined}`}></div>
-
       <h1>Select your plan</h1>
 
       <div className="container">
@@ -157,23 +155,27 @@ const Tabs = () => {
         </div>
         {/* ========================================= */}
 
-        <div className={`login-box ${show == true ? "active" : undefined}`}>
-          <i className="fa-solid fa-circle-xmark" onClick={closePoUp}></i>
+        <div className={`layer ${show == true ? "active" : undefined}`}>
+          <div
+            className={`login-box popup-box ${
+              show == true ? "active" : undefined
+            }`}
+          >
+            <i className="fa-solid fa-circle-xmark" onClick={closePoUp}></i>
 
-          <div className="image">
-            <img src={Videotape} alt="" />
-          </div>
-          <div className="left">
-            <h2>Stream IPTV Effortlessly with Google Login</h2>
-            <p>
-              Say goodbye to complicated login processes and hello to seamless
-              streaming with Google Login for your IPTV site. Simply link your
-              Google account and save your accounts with just one click
-            </p>
+            <img src={Videotape} alt="img" />
+            <div className="left">
+              <h2>Stream IPTV Effortlessly with Google Login</h2>
+              <p>
+                Say goodbye to complicated login processes and hello to seamless
+                streaming with Google Login for your IPTV site. Simply link your
+                Google account and save your accounts with just one click
+              </p>
 
-            <button type="button" className="g">
-              Login with google
-            </button>
+              <button type="button" className="g">
+                Login with google
+              </button>
+            </div>
           </div>
         </div>
       </div>
