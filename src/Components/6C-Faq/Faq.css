@@ -1,0 +1,72 @@
+.faq {
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq .wrapper {
+  background: url("/public/bg-pattern-desktop.svg");
+  background-color: rgba(74, 108, 247, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 20px;
+  position: relative;
+  height: 550px;
+  max-width: 85vw;
+  max-height: 800px;
+  border: 15px double #fff;
+}
+
+.faq .image {
+  position: relative;
+}
+
+.faq .image img.faqImage {
+  position: relative;
+}
+
+.faq .image img.boxImage {
+  position: absolute;
+  bottom: 9%;
+  left: -20%;
+}
+
+.faq .questions {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  background: red;
+}
+
+.faq .questions h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.faq .container {
+  position: relative;
+}
+
+.container > h2 {
+  position: absolute;
+  z-index: 100 !important;
+  top: -44px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+}
+
+.faqcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.faq .MuiPaper-root {
+  border-bottom: 1px solid #ccc;
+}

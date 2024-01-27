@@ -234,5 +234,31 @@
         }
       ]
     }
+  ],
+  "Faqs": [
+    {
+      "id": 1,
+      "expand": "panel1",
+      "question": "What Payment Methods Are Accepted?",
+      "answer": "We are accepting Paypal, Credit Card payment only right now."
+    },
+    {
+      "id": 2,
+      "expand": "panel2",
+      "question": "How Many Channel do I Get?",
+      "answer": "IPTVTrends Provides around 19000+ live TV channels from the world in local and international languages. Instead of this, a user will also get 40,000 to 60,000+ VODS including TV Series, Movies, Dramas and so on."
+    },
+    {
+      "id": 3,
+      "expand": "panel3",
+      "question": "Can I Cancel My Service?",
+      "answer": "We are not contracting with anyone and you are completely free to cancel our service at any time. Once you cancelled the service you won't be charged and the service will be ended automatically at the time when you purchase it."
+    },
+    {
+      "id": 4,
+      "expand": "panel4",
+      "question": "Is IPTV Safe To Use?",
+      "answer": "Of course, IPTV is safe to use because this is simply a service that let you stream your favourite cable channels on the internet without buying a cable connection. Even though we are not pirating anything here and the channels that we provide at our website are licensed and safe to stream."
+    }
   ]
 }

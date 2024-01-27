@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-.container {
+.prices .container {
   overflow: hidden;
 }
 
@@ -245,7 +245,7 @@
 
 @media screen and (max-width: 1200px) {
   .login-box {
-    height: 80%;
+    height: 65%;
     width: 100%;
   }
 
