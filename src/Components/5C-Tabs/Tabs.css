@@ -10,7 +10,7 @@
 */
 
 .prices {
-  margin-bottom: 120px;
+  margin-bottom: var(--mb);
   width: 100vw;
   text-align: center;
   position: relative;

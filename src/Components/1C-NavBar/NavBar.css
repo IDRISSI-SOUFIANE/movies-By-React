@@ -17,10 +17,18 @@
 header.container {
   padding: 0 20px;
   height: 80px;
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2000 !important;
+  width: 100%;
+  backdrop-filter: blur(4px);
+  background-color: hsla(0, 0%, 100%, 0.8);
+  border-bottom: 1px solid #eaeaea;
+}
+
+.headroom {
+  z-index: 5000 !important;
 }
 
 /*

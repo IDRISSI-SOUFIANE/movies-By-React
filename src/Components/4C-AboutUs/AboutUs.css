@@ -1,5 +1,5 @@
 .about-us {
-  margin-bottom: 150px;
+  margin-bottom: var(--mb);
 }
 
 .containeofAll {

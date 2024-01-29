@@ -1,0 +1,180 @@
+.contact-us {
+  background-color: #1d262d;
+  padding: 30px;
+  position: relative;
+  z-index: 3000 !important;
+}
+
+.contact-us h2 {
+  color: #fff;
+  font-size: 3rem;
+  padding: 30px 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  gap: 2rem;
+}
+
+.content .left {
+  flex-basis: 50%;
+}
+
+form input {
+  padding: 20px;
+  width: 100%;
+  border: 1px solid #869fb291;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 15px;
+  caret-color: #fff;
+  background-color: transparent;
+  color: white;
+}
+
+form input:focus {
+  outline: none;
+}
+
+.name-email {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.subject-message-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+#subject,
+#message {
+  width: 100%;
+  all: unset;
+  border: 1px solid #869fb291;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 15px;
+  caret-color: #fff;
+  background-color: transparent;
+  color: white;
+}
+
+#message {
+  min-height: 9rem;
+  overflow: hidden;
+}
+
+button.btn {
+  background-color: #ddd;
+  color: #111;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 260px;
+  padding: 20px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  animation: 2s infinite pulse2;
+}
+
+button.btn:hover {
+  animation: none;
+}
+
+.content .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 50%;
+}
+
+.content .right a,
+.content .right .a {
+  border: 1px solid #869fb291;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 25px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.content .right a i,
+.content .right .a i:first-child {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--cyan);
+}
+.content .right .a .fa-copy {
+  color: #fff;
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.content .right a > div p,
+.content .right .a > div p {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* 4- ========== MEDIA~QUERY============= */
+
+@media screen and (max-width: 1150px) {
+  .contact-us {
+    padding: 10px;
+  }
+  .content {
+    flex-direction: column-reverse;
+  }
+  .content .right a,
+  .content .right .a {
+    padding: 12px;
+  }
+
+  .content .right .a .fa-copy {
+    top: 12px;
+  }
+}
+
+/* 3- ========= ANIMATION =========*/
+/* ========= PLUS2 ========== */
+@-webkit-keyframes pulse2 {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.5);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.5);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.5);
+  }
+}
+@keyframes pulse2 {
+  0% {
+    -moz-box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.5);
+    box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.5);
+  }
+
+  70% {
+    -moz-box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.5);
+    box-shadow: 0 0 0 15px hsla(0, 0%, 100%, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0.5);
+    box-shadow: 0 0 0 0 hsla(0, 0%, 100%, 0);
+  }
+}

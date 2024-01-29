@@ -1,23 +1,42 @@
+/* 
+
+1. FAQ
+
+2. IMAGE 
+
+3. MUI
+
+4. MEDIA~QUERY
+
+*/
+
+/* ==== 1. FAQ ==== */
+
 .faq {
-  margin-bottom: 120px;
+  margin-bottom: var(--mb);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .faq .wrapper {
-  background: url("/public/bg-pattern-desktop.svg");
-  background-color: rgba(74, 108, 247, 0.05);
+  background: url("../../../public//images//bg-pattern-desktop.svg");
+  background-position: 120%;
+  background-repeat: no-repeat;
+  background-position: 120%;
+  background-repeat: no-repeat;
+  background-color: #eeeeee;
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 20px;
   position: relative;
-  height: 550px;
   max-width: 85vw;
-  max-height: 800px;
+  max-height: 100vh;
   border: 15px double #fff;
 }
+
+/* ==== 2. IMAGE ==== */
 
 .faq .image {
   position: relative;
@@ -33,18 +52,7 @@
   left: -20%;
 }
 
-.faq .questions {
-  flex-basis: 100%;
-  display: flex;
-  flex-direction: column;
-  background: red;
-}
-
-.faq .questions h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 50px;
-}
+/* ==== 3. MUI ==== */
 
 .faq .container {
   position: relative;
@@ -53,8 +61,8 @@
 .container > h2 {
   position: absolute;
   z-index: 100 !important;
-  top: -44px;
-  left: 50%;
+  top: -11px;
+  left: 31px;
   transform: translateX(-50%);
   font-size: 2rem;
 }
@@ -64,9 +72,37 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
+  margin-top: 2rem;
 }
 
 .faq .MuiPaper-root {
   border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 1rem;
+}
+
+.faq .MuiTypography-root {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.faq .answer {
+  font-size: 1.1rem;
+  color: var(--gray-dark);
+}
+
+/* ==== 4. MEDIA~QUERY ==== */
+
+@media screen and (max-width: 1150px) {
+  .faq .wrapper {
+    max-width: 95vw;
+  }
+  .faq .image img.faqImage {
+    display: none;
+  }
+
+  .faq .image img.boxImage {
+    display: none;
+  }
 }

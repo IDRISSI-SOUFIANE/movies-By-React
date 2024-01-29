@@ -55,7 +55,7 @@ const Faq = () => {
                     <Typography>{faq.question}</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography>{faq.answer}</Typography>
+                    <Typography className="answer">{faq.answer}</Typography>
                   </AccordionDetails>
                 </Accordion>
               ))}

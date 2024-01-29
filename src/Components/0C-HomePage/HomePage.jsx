@@ -4,6 +4,8 @@ import Nwe from "../3C-New/3~1C-Movies/Movies";
 import AboutUs from "../4C-AboutUs/AboutUs";
 import Tabs from "../5C-Tabs/Tabs";
 import Faq from "../6C-Faq/Faq";
+import ContactUs from "../7C-Footer/Contact-us";
+import Footer from "../8C-Footer/Footer";
 
 const HomePage = () => {
   return (
@@ -14,6 +16,8 @@ const HomePage = () => {
       <AboutUs />
       <Tabs />
       <Faq />
+      <ContactUs />
+      <Footer />
     </>
   );
 };

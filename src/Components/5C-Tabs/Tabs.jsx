@@ -32,14 +32,14 @@ const Tabs = () => {
       });
     });
 
-    const loginBox = document.querySelector(".login-box");
+    // const loginBox = document.querySelector(".login-box");
 
-    const timer = setTimeout(() => {
-      loginBox;
-    }, 7000);
+    // const timer = setTimeout(() => {
+    //   loginBox;
+    // }, 7000);
 
-    // Cleanup function to clear the timer when the component unmounts
-    return () => clearTimeout(timer);
+    // // Cleanup function to clear the timer when the component unmounts
+    // return () => clearTimeout(timer);
   }, []);
 
   const check = () => {

@@ -1,4 +1,5 @@
 import "./NavBar.css";
+import Headroom from "react-headroom";
 
 import data from "../../../public/data.json";
 
@@ -7,29 +8,31 @@ const links = data.Links;
 
 const NavBar = () => {
   return (
-    <header className="container">
-      <div className="Brand-links">
-        <p className="Brand">{title}</p>
-        <ul>
-          {links &&
-            links.length > 0 &&
-            links.map((link, index) => (
-              <li key={link.id}>
-                <a href="#" className={index === 0 ? "first-link" : ""}>
-                  {link.title}
-                </a>
-              </li>
-            ))}
-        </ul>
-      </div>
-      <div className="btn-menu-icon">
-        <button>Login</button>
-        <div className="menu-icon">
-          <span></span>
-          <span></span>
+    <Headroom>
+      <header className="container">
+        <div className="Brand-links">
+          <p className="Brand">{title}</p>
+          <ul>
+            {links &&
+              links.length > 0 &&
+              links.map((link, index) => (
+                <li key={link.id}>
+                  <a href="#" className={index === 0 ? "first-link" : ""}>
+                    {link.title}
+                  </a>
+                </li>
+              ))}
+          </ul>
         </div>
-      </div>
-    </header>
+        <div className="btn-menu-icon">
+          <button>Login</button>
+          <div className="menu-icon">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </header>
+    </Headroom>
   );
 };
 
