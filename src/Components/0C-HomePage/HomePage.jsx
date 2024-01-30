@@ -6,6 +6,7 @@ import Tabs from "../5C-Tabs/Tabs";
 import Faq from "../6C-Faq/Faq";
 import ContactUs from "../7C-ContactUs/Contact-us";
 import Footer from "../8C-Footer/Footer";
+import GetTestChatBot from "../9C-GetTest-ChatBot/GetTest-ChatBot";
 
 const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ const HomePage = () => {
       <Faq />
       <ContactUs />
       <Footer />
+      <GetTestChatBot />
     </>
   );
 };
