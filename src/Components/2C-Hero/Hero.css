@@ -39,7 +39,7 @@ section.hero p span {
   font-weight: bold;
 }
 
-section.hero button {
+section.hero .button {
   background-color: #111;
   color: #fff;
   font-size: 1.8rem;
@@ -51,10 +51,11 @@ section.hero button {
   cursor: pointer;
   margin-bottom: 20px;
   text-transform: uppercase;
+  text-align: center;
   animation: 2s infinite pulse;
 }
 
-section.hero button:hover {
+section.hero .button:hover {
   animation: none;
 }
 
@@ -71,6 +72,7 @@ section.hero .animation-Button a {
   text-align: center;
   overflow: hidden;
   border: 4px solid #fff;
+  cursor: pointer;
 }
 
 section.hero div.animation-Button a i {
@@ -138,9 +140,6 @@ section.hero .animation-svg {
 /* =1- ========= MEDIA~QUERY =========*/
 
 @media screen and (max-width: 1200px) {
-  section.hero {
-  }
-
   section.hero .info {
     flex-basis: 100%;
     z-index: 3;

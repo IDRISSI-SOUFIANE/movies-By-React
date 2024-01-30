@@ -39,12 +39,22 @@ header .Brand-links {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  position: relative;
+  z-index: 100;
 }
 
 header .Brand-links p {
   font-size: 1.8rem;
 }
 header .Brand-links p::first-letter {
+  color: var(--primary-color);
+}
+
+header .Brand-links p.ShowIsTrue {
+  color: #fff;
+  font-size: 1.8rem;
+}
+header .Brand-links p.ShowIsTrue::first-letter {
   color: var(--primary-color);
 }
 
@@ -114,6 +124,7 @@ header .menu-icon {
   position: relative;
   background-color: #111;
   display: none;
+  z-index: 100 !important;
 }
 
 header .menu-icon span {
@@ -135,16 +146,48 @@ header .menu-icon span:last-child {
   top: 30px;
 }
 
-header .menu-icon:hover span:first-child {
+header .menu-icon.active span:first-child,
+header .menu-icon.active span:last-child {
   top: 20px;
   left: 5px;
+}
+
+header .menu-icon.active span:first-child {
   transform: rotate(45deg);
 }
 
-header .menu-icon:hover span:last-child {
-  top: 20px;
-  left: 5px;
+header .menu-icon.active span:last-child {
   transform: rotate(-45deg);
+}
+
+ul.links-in-Media {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  /* height: 100vh; */
+  height: calc(100vh + 30vh);
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s ease-out;
+  transform: translateY(-100%);
+}
+
+ul.links-in-Media.active {
+  transform: translateY(0);
+}
+
+ul.links-in-Media li a {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+ul.links-in-Media li a.active {
+  color: var(--primary-color);
 }
 
 /*

@@ -22,7 +22,7 @@ import { Autoplay, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const MoviesSlide = () => {
-  //   const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const [movies, setMovies] = useState([]);
 
@@ -143,16 +143,16 @@ const MoviesSlide = () => {
         modules={[Autoplay, A11y]}
         spaceBetween={7}
         slidesPerView={20}
-        // autoplay={{
-        //   delay: 0,
-        //   disableOnInteraction: false,
-        //   pauseOnMouseEnter: true,
-        //   ...(isHovered && { pause: true }),
-        // }}
-        // onMouseEnter={() => setIsHovered(true)}
-        // onMouseLeave={() => setIsHovered(false)}
-        // loop={true}
-        // speed={1000}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+          ...(isHovered && { pause: true }),
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        loop={true}
+        speed={1000}
         breakpoints={{
           0: {
             slidesPerView: 1,
@@ -201,15 +201,17 @@ const MoviesSlide = () => {
       </Swiper>
       {/* 1 - ============== SWIPER ============== */}
 
-      <div className={`popUpBox ${popUpBox == true ? "active" : undefined}`}>
-        <div className="conentInf">
+      <div className={`layerOne ${popUpBox == true ? "active" : undefined}`}>
+        <div
+          className={`login-boxOne popup-boxOne ${
+            popUpBox == true ? "active" : undefined
+          }`}
+        >
           <div className="close-icon" onClick={() => closeIcon()}>
             <i className="fa-solid fa-circle-xmark"></i>
           </div>
 
-          <div className="image">
-            <YouTube videoId={youtubeId} onReady={onReady} />
-          </div>
+          <YouTube videoId={youtubeId} onReady={onReady} />
 
           <div className="description">
             <h3>{clickedSlide.title}</h3>

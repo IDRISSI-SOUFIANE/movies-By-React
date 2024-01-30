@@ -1,10 +1,11 @@
-import "./Movies.css";
+import "./New.css";
+
 import MoviesSlide from "./3~1C-MoviesSwiper/MoviesSlide";
 import Tv from "../3~2C-Tv/Tv";
 
 const New = () => {
   return (
-    <section className="new">
+    <section className="new" id="Whats New">
       <div className="info">
         <h1>Always up to date.</h1>
         <p>

@@ -51,7 +51,7 @@ const Tabs = () => {
   };
 
   return (
-    <section className="prices">
+    <section className="prices" id="Prices">
       <h1>Select your plan</h1>
 
       <div className="container">

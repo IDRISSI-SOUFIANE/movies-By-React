@@ -260,5 +260,27 @@
       "question": "Is IPTV Safe To Use?",
       "answer": "Of course, IPTV is safe to use because this is simply a service that let you stream your favourite cable channels on the internet without buying a cable connection. Even though we are not pirating anything here and the channels that we provide at our website are licensed and safe to stream."
     }
+  ],
+  "footer": [
+    {
+      "id": 1,
+      "title": "FaQ",
+      "url": "/FaQ"
+    },
+    {
+      "id": 2,
+      "title": "Prices",
+      "url": "/Prices"
+    },
+    {
+      "id": 3,
+      "title": "About-Us",
+      "url": "/About-Us"
+    },
+    {
+      "id": 4,
+      "title": "Whats New",
+      "url": "/Whats New"
+    }
   ]
 }

@@ -67,90 +67,83 @@ img.image {
 =========================================
 */
 
-.overlay.active {
-  position: fixed;
-  inset: 0;
-  z-index: 5 !important;
-  backdrop-filter: blur(4px);
-  background-color: rgba(40, 40, 48, 0.91);
-}
-
-.popUpBox {
+.layerOne {
   position: fixed;
   background-color: rgb(0 4 8 / 50%);
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 100 !important;
+  z-index: -999 !important;
+  opacity: 0;
+  visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  /* transition: var(--trns); */
 }
 
-.popUpBox.active {
-  /* transform: translate(-50%, -50%); */
-  visibility: visible;
+.layerOne.active {
   opacity: 1;
-  z-index: 5000 !important;
+  overflow: hidden;
+  visibility: visible;
+  z-index: 9999 !important;
 }
 
-.popUpBox .conentInf {
-  position: relative;
+.login-boxOne {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
-  max-height: 85vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  /* max-width: 85vw; */
   max-width: 800px;
-  width: 100%;
-  /* border-radius: 15px; */
-  overflow: auto;
+  max-height: 85vh;
+  overflow: hidden;
   position: relative;
-  /* overflow: hidden scroll; */
-  margin: 0 10px;
+  width: 100%;
 }
 
-.popUpBox .conentInf .close-icon {
+.login-boxOne .description {
+  padding: 20px;
+}
+
+.login-boxOne .description h3 {
+  font-size: 1.8rem;
+}
+
+.login-boxOne .description > p {
+  color: #666;
+  font-size: 1.5rem;
+  margin: 0.7rem 0;
+  width: 100%;
+}
+
+.popup-boxOne {
+  opacity: 0;
+  -webkit-transform: translateY(100vh);
+  transform: translateY(100vh);
+  transition: transform 0.3s ease;
+}
+
+.popup-boxOne.active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.login-boxOne i {
   position: absolute;
   right: 0;
-  font-size: 3.5rem;
-  color: #fff;
+  top: 8px;
+  font-size: 3rem;
+  color: #ddd;
   cursor: pointer;
   z-index: 102 !important;
-  margin: 20px;
+  margin: 10px 25px;
 }
 
-.popUpBox .conentInf .image {
+.login-boxOne img {
   width: 100%;
-  height: 75%;
-}
-
-.popUpBox .conentInf .image img {
-  width: 100%;
-  height: 100%;
-}
-
-.popUpBox .conentInf .description {
-  margin: 20px 20px 0;
-}
-
-.popUpBox .conentInf .description > h3 {
-  color: green;
-  font-weight: bold;
-  font-size: 1.6rem;
-  margin-bottom: 5px;
-}
-
-.popUpBox .conentInf .description p {
-  color: #666;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-size: 1.3rem;
-  line-height: 1.3;
-  font-weight: normal;
-  margin-bottom: 10px;
 }
 
 iframe {

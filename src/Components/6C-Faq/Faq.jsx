@@ -28,7 +28,7 @@ const Faq = () => {
   };
 
   return (
-    <section className="faq">
+    <section className="faq" id="FaQ">
       <div className="wrapper">
         <div className="image">
           <img className="faqImage" src={faqImage} alt="image" />

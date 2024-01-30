@@ -6,7 +6,7 @@ import data from "../../../public/data.json";
 
 const AboutUs = () => {
   return (
-    <section className="about-us">
+    <section className="about-us" id="About-Us">
       <div className="containeofAll">
         <h2>About Us</h2>
 

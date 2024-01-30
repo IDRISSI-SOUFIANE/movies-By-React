@@ -9,7 +9,7 @@ const ContactUs = () => {
   const [state, handleSubmit] = useForm("xvoezyod");
 
   return (
-    <section className="contact-us">
+    <section className="contact-us" id="Contact-Us">
       <h2>Get In Touch</h2>
 
       <div className="content">

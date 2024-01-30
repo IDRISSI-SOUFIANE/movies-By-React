@@ -1,4 +1,7 @@
 import "./Hero.css";
+
+import { Link } from "react-scroll";
+
 import data from "../../../public/data.json";
 
 import Lottie from "lottie-react";
@@ -7,13 +10,22 @@ import watchAnimation from "../../../public/images/watch.json";
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="Home">
       <div className="container">
         <div className="info">
           <p>
             {data.Hero[0].p} <span>{data.Hero[0].span}</span>
           </p>
-          <button>{data.Hero[0].btn}</button>
+          <Link
+            className="button"
+            to="Prices"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={800}
+          >
+            {data.Hero[0].btn}
+          </Link>
         </div>
 
         <div className="animation-svg">
@@ -26,9 +38,15 @@ const Hero = () => {
       </div>
 
       <div className="animation-Button">
-        <a href="#">
+        <Link
+          to="Whats New"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={800}
+        >
           <i className="fa-solid fa-arrow-down"></i>
-        </a>
+        </Link>
       </div>
     </section>
   );
